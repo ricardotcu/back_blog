@@ -19,7 +19,7 @@ const options = {
   allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "X-Access-Token", "Authorization"],
   credentials: true,
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-  origin: ["*", "https://zen-poincare-31d36c.netlify.app", "https://zen-poincare-31d36c.netlify.app/", "https://zen-poincare-31d36c.netlify.app/chome"],
+  origin: ["*", "https://reverent-galileo-04732f.netlify.app", "https://reverent-galileo-04732f.netlify.app/", "https://reverent-galileo-04732f.netlify.app/home"],
   preflightContinue: false
 }; //use cors middleware
 
