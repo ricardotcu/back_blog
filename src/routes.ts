@@ -18,9 +18,9 @@ const options:cors.CorsOptions = {
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
   origin: [
       "*",
-      "https://reverent-galileo-04732f.netlify.app",
-      "https://reverent-galileo-04732f.netlify.app/",
-      "https://reverent-galileo-04732f.netlify.app/home"
+      "https://5f0d88be75de0d00071dfbf9--reverent-galileo-04732f.netlify.app/home",
+      "https://5f0d88be75de0d00071dfbf9--reverent-galileo-04732f.netlify.app/home/",
+      "https://5f0d88be75de0d00071dfbf9--reverent-galileo-04732f.netlify.app/home/home"
   ],
   preflightContinue: false
 };
