@@ -14,7 +14,7 @@ class createtableposts1594718253831 {
     await queryRunner.query(`CREATE TABLE "posts" (
                 "id" uuid NOT NULL DEFAULT uuid_generate_v4(),
                 "nome" character varying(100) NOT NULL,
-                "caminho" character varying(100) NOT NULL`);
+                "caminho" character varying(100) NOT NULL)`);
   }
 
   async down(queryRunner) {

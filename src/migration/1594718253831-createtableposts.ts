@@ -9,7 +9,7 @@ export class createtableposts1594718253831 implements MigrationInterface {
             `CREATE TABLE "posts" (
                 "id" uuid NOT NULL DEFAULT uuid_generate_v4(),
                 "nome" character varying(100) NOT NULL,
-                "caminho" character varying(100) NOT NULL`
+                "caminho" character varying(100) NOT NULL)`
         );
     }
 
