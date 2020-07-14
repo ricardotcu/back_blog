@@ -1,8 +1,7 @@
 import {MigrationInterface, QueryRunner} from "typeorm";
 
-export class addtableimgfinal1594726396618 implements MigrationInterface {
-    
-    
+export class addtableimgfinal11594727538613 implements MigrationInterface {
+
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(
             "DELETE FROM posts WHERE nome = 'posts'"

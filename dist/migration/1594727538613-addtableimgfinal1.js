@@ -3,9 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.addtableimgfinal1594726396618 = void 0;
+exports.addtableimgfinal11594727538613 = void 0;
 
-class addtableimgfinal1594726396618 {
+class addtableimgfinal11594727538613 {
   async up(queryRunner) {
     await queryRunner.query("DELETE FROM posts WHERE nome = 'posts'");
     await queryRunner.query("INSERT INTO posts (nome, caminho) VALUES ('posts', '../../assets/images/img1.jpg')");
@@ -64,4 +64,4 @@ class addtableimgfinal1594726396618 {
 
 }
 
-exports.addtableimgfinal1594726396618 = addtableimgfinal1594726396618;
+exports.addtableimgfinal11594727538613 = addtableimgfinal11594727538613;
