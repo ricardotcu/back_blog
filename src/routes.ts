@@ -18,9 +18,9 @@ const options:cors.CorsOptions = {
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
   origin: [
       "*",
-      "https://zen-poincare-31d36c.netlify.app",
-      "https://zen-poincare-31d36c.netlify.app/",
-      "https://zen-poincare-31d36c.netlify.app/chome"
+      "https://reverent-galileo-04732f.netlify.app",
+      "https://reverent-galileo-04732f.netlify.app/",
+      "https://reverent-galileo-04732f.netlify.app/home"
   ],
   preflightContinue: false
 };
