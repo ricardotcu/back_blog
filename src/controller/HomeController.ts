@@ -8,5 +8,5 @@ export const getHome = async (req: Request, res: Response) => {
 
     const destaques = await getRepository(Posts).find();
 
-    return res.json();
+    return res.json(destaques);
 }

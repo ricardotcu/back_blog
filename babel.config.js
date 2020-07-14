@@ -15,10 +15,6 @@ module.exports = {
     ["@babel/plugin-proposal-class-properties", { loose: true }],
     ['module-resolver', {
       alias: {
-        '@config': './src/config',
-        '@models': './src/models',
-        '@controllers': './src/controllers',
-        '@views': './src/views'
       }
     }]
   ],
