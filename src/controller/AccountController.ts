@@ -29,7 +29,7 @@ export const login = async(req: Request, res: Response) => {
           email
       }
   });
-  
+  console.log(user)
   if(user.length === 1){ 
       if(await bcrypt.compare(senha, user[0].senha)){
           const token = jwt.sign({ id: user[0].id }, secret, {
@@ -59,6 +59,6 @@ export const getUser = async(req: Request, res: Response) => {
     const user = await getRepository(User).find();
 
     console.log(user)
-    
+
     return res.json(user);
 }

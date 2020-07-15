@@ -48,6 +48,7 @@ const login = async (req, res) => {
       email
     }
   });
+  console.log(user);
 
   if (user.length === 1) {
     if (await bcrypt.compare(senha, user[0].senha)) {
