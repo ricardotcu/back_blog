@@ -13,8 +13,6 @@ var _HomeController = require("./controller/HomeController");
 
 var _AccountController = require("./controller/AccountController");
 
-var _auth = require("./middlewares/auth");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const routes = (0, _express.Router)(); //opçoes para cors midddleware
@@ -35,8 +33,6 @@ routes.get('/login', _AccountController.login); //feito
 routes.get('/register', _AccountController.register); //feito
 
 routes.get('/home', _HomeController.getHome); //feito
-//middleware autenticacao
 
-routes.use(_auth.auth);
 var _default = routes;
 exports.default = _default;

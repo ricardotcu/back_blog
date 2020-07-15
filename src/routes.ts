@@ -35,8 +35,6 @@ routes.get('/login', login); //feito
 routes.get('/register', register); //feito
 routes.get('/home', getHome); //feito
 
-//middleware autenticacao
-routes.use(auth);
 
 
 export default routes;
