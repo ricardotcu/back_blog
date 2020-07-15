@@ -5,7 +5,7 @@ export class configpk1594819571216 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
-      "DELETE TABLE user_posts"
+      "DROP TABLE user_posts"
     );
     await queryRunner.query(
       `CREATE TABLE "user_posts" (

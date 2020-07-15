@@ -11,7 +11,7 @@ class configpk1594819571216 {
   }
 
   async up(queryRunner) {
-    await queryRunner.query("DELETE TABLE user_posts");
+    await queryRunner.query("DROP TABLE user_posts");
     await queryRunner.query(`CREATE TABLE "user_posts" (
       "id" uuid NOT NULL DEFAULT uuid_generate_v4(),
       "id_user" uuid UNIQUE NOT NULL,
