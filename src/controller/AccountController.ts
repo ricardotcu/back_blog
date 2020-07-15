@@ -15,6 +15,7 @@ export const register = async(req: Request, res: Response) => {
         email,
         senha: senha_hash
     });
+    console.log(user)
     return res.json(user);
 }
 
@@ -41,6 +42,7 @@ export const login = async(req: Request, res: Response) => {
               email: user[0].email,
               token
           }
+          console.log(data)
 
           return res.json(data);
       }

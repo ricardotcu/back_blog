@@ -30,6 +30,7 @@ const register = async (req, res) => {
     email,
     senha: senha_hash
   });
+  console.log(user);
   return res.json(user);
 }; //loga
 
@@ -61,6 +62,7 @@ const login = async (req, res) => {
         email: user[0].email,
         token
       };
+      console.log(data);
       return res.json(data);
     } else {
       return res.status(404).json({
