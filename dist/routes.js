@@ -33,10 +33,10 @@ routes.get('/', _HomeController.getHome); //feito
 routes.get('/login', _AccountController.login); //feito
 
 routes.get('/register', _AccountController.register); //feito
+
+routes.get('/home', _HomeController.getHome); //feito
 //middleware autenticacao
 
 routes.use(_auth.auth);
-routes.get('/home', _HomeController.getHome); //feito
-
 var _default = routes;
 exports.default = _default;
