@@ -30,7 +30,8 @@ export const login = async(req: Request, res: Response) => {
       }
   });
     
-  if(user.length === 1){ 
+    if (user.length === 1) { 
+      console.log('hfhfhu')
       if(await bcrypt.compare(senha, user[0].senha)){
           const token = jwt.sign({ id: user[0].id }, secret, {
               expiresIn: '1d'

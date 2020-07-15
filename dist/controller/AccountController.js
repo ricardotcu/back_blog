@@ -51,6 +51,8 @@ const login = async (req, res) => {
   });
 
   if (user.length === 1) {
+    console.log('hfhfhu');
+
     if (await bcrypt.compare(senha, user[0].senha)) {
       const token = jwt.sign({
         id: user[0].id
