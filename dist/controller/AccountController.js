@@ -49,6 +49,7 @@ const login = async (req, res) => {
       email
     }
   });
+  console.log(user.length);
 
   if (user.length === 1) {
     console.log('hfhfhu');

@@ -29,7 +29,7 @@ export const login = async(req: Request, res: Response) => {
           email
       }
   });
-    
+    console.log(user.length)
     if (user.length === 1) { 
       console.log('hfhfhu')
       if(await bcrypt.compare(senha, user[0].senha)){
