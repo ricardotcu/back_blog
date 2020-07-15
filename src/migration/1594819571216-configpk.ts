@@ -8,10 +8,10 @@ export class configpk1594819571216 implements MigrationInterface {
       "DROP TABLE user_posts"
     );
     await queryRunner.query(
-      "DROP TABLE user"
+      "DROP TABLE posts"
     );
     await queryRunner.query(
-      "DROP TABLE posts"
+      "DROP TABLE user"
     );
     await queryRunner.query(
         `CREATE TABLE "user" (

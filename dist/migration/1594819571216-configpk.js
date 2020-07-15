@@ -12,8 +12,8 @@ class configpk1594819571216 {
 
   async up(queryRunner) {
     await queryRunner.query("DROP TABLE user_posts");
-    await queryRunner.query("DROP TABLE user");
     await queryRunner.query("DROP TABLE posts");
+    await queryRunner.query("DROP TABLE user");
     await queryRunner.query(`CREATE TABLE "user" (
             "id" uuid UNIQUE NOT NULL DEFAULT uuid_generate_v4(),
             "nome" character varying(100) NOT NULL,
