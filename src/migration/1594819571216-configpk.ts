@@ -5,13 +5,13 @@ export class configpk1594819571216 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
-      "DROP TABLE user_posts"
+      `DROP TABLE "user_posts"`
     );
     await queryRunner.query(
-      "DROP TABLE posts"
+      `DROP TABLE "posts"`
     );
     await queryRunner.query(
-      "DROP TABLE user"
+      `DROP TABLE "user"`
     );
     await queryRunner.query(
         `CREATE TABLE "user" (
