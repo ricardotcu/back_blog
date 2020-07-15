@@ -5,10 +5,13 @@ export class configpk1594819571216 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
+      "DELETE TABLE user_posts"
+    );
+    await queryRunner.query(
       `CREATE TABLE "user_posts" (
       "id" uuid NOT NULL DEFAULT uuid_generate_v4(),
       "id_user" uuid UNIQUE NOT NULL,
-      "id_posts" uuid NOT NULL,
+      "id_posts" uuid UNIQUE NOT NULL,
       CONSTRAINT "PK_3ef0759852caaefb9bac7cf913e" PRIMARY KEY ("id_user", "id_posts"))`
     );
     await queryRunner.query(
