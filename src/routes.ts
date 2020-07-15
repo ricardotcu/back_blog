@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import cors from 'cors';
 import { getHome } from './controller/HomeController';
+import { login, register } from './controller/AccountController';
+import { auth } from './middlewares/auth';
 
 const routes = Router();
 
@@ -29,6 +31,12 @@ const options:cors.CorsOptions = {
 routes.use(cors(options));
 
 routes.get('/', getHome); //feito
+routes.get('/login', login); //feito
+routes.get('/register', register); //feito
+
+//middleware autenticacao
+routes.use(auth);
+
 routes.get('/home', getHome); //feito
 
 export default routes;

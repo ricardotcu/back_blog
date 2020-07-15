@@ -18,6 +18,4 @@ export class User{
     @ManyToMany(type => Posts)
     @JoinTable()
     posts: Posts;
-  
-  
 }
