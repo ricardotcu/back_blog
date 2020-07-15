@@ -31,10 +31,12 @@ const options:cors.CorsOptions = {
 routes.use(cors(options));
 
 routes.get('/', getHome); //feito
-routes.get('/login', login); //feito
-routes.get('/register', register); //feito
+routes.post('/login', login); //feito
+routes.post('/register', register); //feito
 routes.get('/home', getHome); //feito
 
+//middleware autenticacao
+routes.use(auth);
 
 
 export default routes;
