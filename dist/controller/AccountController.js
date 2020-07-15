@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.login = exports.register = void 0;
+exports.getUser = exports.login = exports.register = void 0;
 
 var _typeorm = require("typeorm");
 
@@ -77,3 +77,11 @@ const login = async (req, res) => {
 };
 
 exports.login = login;
+
+const getUser = async (req, res) => {
+  const user = await (0, _typeorm.getRepository)(_User.User).find();
+  console.log(user);
+  return res.json(user);
+};
+
+exports.getUser = getUser;

@@ -35,6 +35,8 @@ routes.post('/login', _AccountController.login); //feito
 routes.post('/register', _AccountController.register); //feito
 
 routes.get('/home', _HomeController.getHome); //feito
+
+routes.get('/user', _AccountController.getUser); //feito
 //middleware autenticacao
 
 routes.use(_auth.auth);

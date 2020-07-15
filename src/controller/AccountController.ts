@@ -54,3 +54,11 @@ export const login = async(req: Request, res: Response) => {
       return res.status(404).json({message: 'erro ao logar'});
   }
 }
+
+export const getUser = async(req: Request, res: Response) => {
+    const user = await getRepository(User).find();
+
+    console.log(user)
+    
+    return res.json(user);
+}

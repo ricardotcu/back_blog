@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import cors from 'cors';
 import { getHome } from './controller/HomeController';
-import { login, register } from './controller/AccountController';
+import { login, register, getUser } from './controller/AccountController';
 import { auth } from './middlewares/auth';
 
 const routes = Router();
@@ -34,6 +34,7 @@ routes.get('/', getHome); //feito
 routes.post('/login', login); //feito
 routes.post('/register', register); //feito
 routes.get('/home', getHome); //feito
+routes.get('/user', getUser); //feito
 
 //middleware autenticacao
 routes.use(auth);
