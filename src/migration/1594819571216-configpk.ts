@@ -8,6 +8,25 @@ export class configpk1594819571216 implements MigrationInterface {
       "DROP TABLE user_posts"
     );
     await queryRunner.query(
+      "DROP TABLE user"
+    );
+    await queryRunner.query(
+      "DROP TABLE posts"
+    );
+    await queryRunner.query(
+        `CREATE TABLE "user" (
+            "id" uuid UNIQUE NOT NULL DEFAULT uuid_generate_v4(),
+            "nome" character varying(100) NOT NULL,
+            "email" character varying(100) NOT NULL,
+            "senha" character varying(100) NOT NULL)`
+    );
+    await queryRunner.query(
+      `CREATE TABLE "posts" (
+          "id" uuid UNIQUE NOT NULL DEFAULT uuid_generate_v4(),
+          "nome" character varying(100) NOT NULL,
+          "caminho" character varying(100) NOT NULL)`
+    );
+    await queryRunner.query(
       `CREATE TABLE "user_posts" (
       "id" uuid NOT NULL DEFAULT uuid_generate_v4(),
       "id_user" uuid UNIQUE NOT NULL,
