@@ -15,7 +15,7 @@ export class User{
     @Column("varchar")
     senha: string;
   
-    @ManyToMany(type => Posts)
+    @ManyToMany(type => Posts, {nullable: true})
     @JoinTable()
-    posts: Posts;
+    posts: Posts[];
 }

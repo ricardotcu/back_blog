@@ -17,7 +17,9 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 
 function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
-let User = (_dec = (0, _typeorm.Entity)('user'), _dec2 = (0, _typeorm.PrimaryGeneratedColumn)("uuid"), _dec3 = (0, _typeorm.Column)("varchar"), _dec4 = (0, _typeorm.Column)("varchar"), _dec5 = (0, _typeorm.Column)("varchar"), _dec6 = (0, _typeorm.ManyToMany)(type => _Posts.Posts), _dec7 = (0, _typeorm.JoinTable)(), _dec(_class = (_class2 = (_temp = class User {
+let User = (_dec = (0, _typeorm.Entity)('user'), _dec2 = (0, _typeorm.PrimaryGeneratedColumn)("uuid"), _dec3 = (0, _typeorm.Column)("varchar"), _dec4 = (0, _typeorm.Column)("varchar"), _dec5 = (0, _typeorm.Column)("varchar"), _dec6 = (0, _typeorm.ManyToMany)(type => _Posts.Posts, {
+  nullable: true
+}), _dec7 = (0, _typeorm.JoinTable)(), _dec(_class = (_class2 = (_temp = class User {
   constructor() {
     _initializerDefineProperty(this, "id", _descriptor, this);
 

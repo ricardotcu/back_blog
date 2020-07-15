@@ -21,7 +21,7 @@ export const register = async(req: Request, res: Response) => {
 
 //loga
 export const login = async(req: Request, res: Response) => {
-  const { email, senha} = req.body;
+  const { email, senha, posts} = req.body;
   const secret = "84edbc64b2e424f48fd21c08e26d9dd9";
 
   const user = await getRepository(User).find({
@@ -29,7 +29,7 @@ export const login = async(req: Request, res: Response) => {
           email
       }
   });
-  console.log(user)
+    
   if(user.length === 1){ 
       if(await bcrypt.compare(senha, user[0].senha)){
           const token = jwt.sign({ id: user[0].id }, secret, {
@@ -40,6 +40,7 @@ export const login = async(req: Request, res: Response) => {
               id: user[0].id,
               nome: user[0].nome,
               email: user[0].email,
+              posts,
               token
           }
           console.log(data)
@@ -51,7 +52,7 @@ export const login = async(req: Request, res: Response) => {
       }
   }
   else{
-      return res.status(404).json({message: 'erro ao logar'});
+      return res.status(404).json({message: 'eerro ao logar'});
   }
 }
 
